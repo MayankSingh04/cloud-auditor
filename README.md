@@ -11,7 +11,7 @@ An automated, serverless platform built on AWS that continuously scans a cloud e
 🚀 Live Demo Showcase
 This is a live recording of the Cloud Auditor dashboard, displaying findings from a scan of a live AWS account. The UI is built with React and animated with Framer Motion.
 
-(Action Required: You need to record a GIF of your dashboard and replace this line. For example: ![Cloud Auditor Live Demo](demo.gif))
+(Action Required: You need to record a GIF of your dashboard, add it to your repository as demo.gif, and this image will appear automatically.)
 
 🎯 The Problem
 Cloud environments are powerful but complex. Two of the biggest challenges companies face are preventing security misconfigurations that can lead to breaches and avoiding unexpected cost overruns from unused or inefficient resources. "Cloud Auditor" solves this by providing an automated "watchdog" that proactively finds these issues before they become major problems.
@@ -33,7 +33,6 @@ This project utilizes a modern, serverless-first technology stack.
 <p align="center">
 <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a>
 <a href="https://www.terraform.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original-wordmark.svg" alt="terraform" width="40" height="40"/> </a>
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
 <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
 <a href="https://www.framer.com/motion/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/framer-motion.svg" alt="framer motion" width="40" height="40"/> </a>
@@ -67,7 +66,7 @@ AWS Cognito
 🏗️ Architecture
 The application is built using a fully serverless, event-driven architecture on AWS.
 
-(Action Required: Use a tool like draw.io to create a simple diagram showing EventBridge -> Lambda Scanner -> DynamoDB -> API Gateway -> React UI and replace this line.)
+(Action Required: Use a tool like draw.io to create a simple diagram, save it as architecture.png in your repository, and this image will appear automatically.)
 
 <details>
 <summary>Click to view detailed Data Flow</summary>
