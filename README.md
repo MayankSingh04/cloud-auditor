@@ -6,7 +6,7 @@ Cloud Auditor - Automated AWS Security & Cost Watchdog
 <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge" alt="License"/>
 </p>
 
-An automated, serverless platform built on AWS that continuously scans a cloud environment for security vulnerabilities and cost anomalies, presenting the findings on a clean, actionable, and animated dashboard.
+An automated, serverless platform built on AWS that continuously scans a cloud environment for security vulnerabilities and cost anomalies, presenting the findings on a clean, actionable, and animated dashboard. This project demonstrates a deep understanding of modern cloud-native architecture, DevSecOps principles, and Infrastructure as Code.
 
 🚀 Live Demo Showcase
 This is a live recording of the Cloud Auditor dashboard, displaying findings from a scan of a live AWS account. The UI is built with React and animated with Framer Motion.
