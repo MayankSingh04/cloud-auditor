@@ -1,200 +1,98 @@
-# ☁️ Cloud Auditor
+Cloud Auditor - Automated AWS Security & Cost Watchdog
+<p align="center">
+<img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge" alt="Build Status"/>
+<img src="https://img.shields.io/badge/cloud-AWS-orange?style=for-the-badge" alt="Cloud Provider"/>
+<img src="https://img.shields.io/badge/IaC-Terraform-blueviolet?style=for-the-badge" alt="Infrastructure as Code"/>
+<img src="https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge" alt="License"/>
+</p>
 
-A modern, interactive cloud security and compliance dashboard built with React, Framer Motion, and AWS Amplify.
+An automated, serverless platform built on AWS that continuously scans a cloud environment for security vulnerabilities and cost anomalies, presenting the findings on a clean, actionable, and animated dashboard.
 
-## 🚀 Features
+🚀 Live Demo Showcase
+This is a live recording of the Cloud Auditor dashboard, displaying findings from a scan of a live AWS account. The UI is built with React and animated with Framer Motion.
 
-- **🔐 Secure Authentication** - AWS Cognito integration with email/password authentication
-- **📊 Interactive Dashboard** - Beautiful statistics and metrics visualization
-- **🔍 Security Findings** - Track and manage security issues with severity indicators
-- **🛡️ Security Groups** - Monitor AWS security group configurations
-- **📋 Reports** - Generate compliance and security reports
-- **📱 Responsive Design** - Works perfectly on desktop and mobile devices
-- **🎨 Modern UI** - Dark theme with glass morphism and smooth animations
+(Action Required: You need to record a GIF of your dashboard and replace this line. For example: ![Cloud Auditor Live Demo](demo.gif))
 
-## 🛠️ Tech Stack
+🎯 The Problem
+Cloud environments are powerful but complex. Two of the biggest challenges companies face are preventing security misconfigurations that can lead to breaches and avoiding unexpected cost overruns from unused or inefficient resources. "Cloud Auditor" solves this by providing an automated "watchdog" that proactively finds these issues before they become major problems.
 
-- **Frontend**: React 19, Vite, Framer Motion
-- **Authentication**: AWS Amplify, AWS Cognito
-- **Styling**: CSS3 with Glass Morphism effects
-- **Backend**: AWS Lambda, AWS API Gateway
-- **Infrastructure**: Terraform, AWS
+✨ Key Features
+Automated Security Scanning: A serverless function runs on a daily schedule to scan for common, high-risk security vulnerabilities (e.g., SSH ports open to the world).
 
-## 📦 Installation
+Serverless & Event-Driven: Built entirely on modern, serverless AWS services for scalability and cost-efficiency.
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd cloud-auditor
-   ```
+Infrastructure as Code (IaC): The entire cloud infrastructure, from the network foundation to the serverless functions, is defined and managed with Terraform.
 
-2. **Install dependencies**
-   ```bash
-   cd frontend
-   npm install
-   ```
+Secure User Authentication: The dashboard is protected by a secure login/sign-up system powered by AWS Cognito.
 
-3. **Configure AWS Amplify**
-   - Update `frontend/src/auth/configureAmplify.js` with your Cognito credentials:
-   ```javascript
-   Amplify.configure({
-     Auth: {
-       Cognito: {
-         region: 'your-region',
-         userPoolId: 'your-user-pool-id',
-         userPoolClientId: 'your-client-id',
-       }
-     }
-   });
-   ```
+Modern UI: A clean and responsive dashboard built with React and animated with Framer Motion to visualize the findings.
 
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+🛠️ Tech Stack & Tools
+This project utilizes a modern, serverless-first technology stack.
 
-5. **Open your browser**
-   Navigate to `http://localhost:5174`
+<p align="center">
+<a href="https://aws.amazon.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a>
+<a href="https://www.terraform.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original-wordmark.svg" alt="terraform" width="40" height="40"/> </a>
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
+<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+<a href="https://www.framer.com/motion/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/framer-motion.svg" alt="framer motion" width="40" height="40"/> </a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg" alt="git" width="40" height="40"/> </a>
+</p>
 
-## 🏗️ Project Structure
+Category
 
-```
-cloud-auditor/
-├── frontend/                 # React application
-│   ├── src/
-│   │   ├── auth/            # Authentication configuration
-│   │   ├── App.jsx          # Main application component
-│   │   ├── App.css          # Application styles
-│   │   └── main.jsx         # Application entry point
-│   ├── package.json         # Frontend dependencies
-│   └── vite.config.js       # Vite configuration
-├── functions/               # AWS Lambda functions
-│   ├── check-security-groups/
-│   └── get-findings/
-├── main.tf                  # Terraform configuration
-└── README.md               # Project documentation
-```
+Technology
 
-## 🔧 Configuration
+Infrastructure as Code
 
-### AWS Cognito Setup
+Terraform
 
-1. Create a Cognito User Pool in AWS Console
-2. Create an App Client
-3. Update the configuration in `frontend/src/auth/configureAmplify.js`
+Cloud Platform
 
-### Environment Variables
+AWS (Lambda, DynamoDB, API Gateway, EventBridge, Cognito)
 
-Create a `.env` file in the frontend directory:
-```env
-VITE_AWS_REGION=your-region
-VITE_USER_POOL_ID=your-user-pool-id
-VITE_USER_POOL_CLIENT_ID=your-client-id
-```
+Backend & Scripting
 
-## 🎨 UI Components
+Python (with Boto3)
 
-- **Header**: Clean navigation with user info and sign-out
-- **Navigation Tabs**: Smooth tab switching with animations
-- **Statistics Cards**: Interactive cards with hover effects
-- **Findings List**: Security issues with severity indicators
-- **Security Groups**: AWS security group monitoring
-- **Reports**: Compliance and security reporting
+Frontend
 
-## 🚀 Deployment
+React.js, Vite, Framer Motion, Axios
 
-### Frontend Deployment
+Authentication
 
-1. **Build the application**
-   ```bash
-   cd frontend
-   npm run build
-   ```
+AWS Cognito
 
-2. **Deploy to AWS S3/CloudFront** or your preferred hosting service
+🏗️ Architecture
+The application is built using a fully serverless, event-driven architecture on AWS.
 
-### Backend Deployment
+(Action Required: Use a tool like draw.io to create a simple diagram showing EventBridge -> Lambda Scanner -> DynamoDB -> API Gateway -> React UI and replace this line.)
 
-1. **Initialize Terraform**
-   ```bash
-   terraform init
-   ```
+<details>
+<summary>Click to view detailed Data Flow</summary>
 
-2. **Deploy infrastructure**
-   ```bash
-   terraform apply
-   ```
+An Amazon EventBridge rule triggers the scanner on a schedule.
 
-## 📱 Responsive Design
+An AWS Lambda function (Python/Boto3) runs, scans the AWS account, and finds vulnerabilities.
 
-The application is fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
+The findings are written to an Amazon DynamoDB table.
 
-## 🎯 Features in Detail
+A React frontend requests the data from a secure API Gateway endpoint.
 
-### Authentication
-- Email/password sign up and sign in
-- Secure session management
-- User profile display
-- Sign out functionality
+A second AWS Lambda function acts as the API, fetching the findings from DynamoDB and returning them to the frontend.
 
-### Dashboard Overview
-- Total findings count
-- Security groups monitored
-- High severity issues
-- Resolved issues count
+</details>
 
-### Security Findings
-- Severity-based color coding
-- Status tracking (open/resolved)
-- Detailed descriptions
-- Action buttons for management
+🎓 What I Learned
+This project was a deep dive into building a professional, secure, and automated cloud-native application. Key skills developed include:
 
-### Security Groups
-- Group status indicators
-- Rule count display
-- Security status badges
-- Quick access to group details
+Designing and implementing a complete serverless architecture on AWS.
 
-### Reports
-- Weekly security reports
-- Compliance reports
-- PDF download functionality
-- Report generation timestamps
+Automating the entire infrastructure lifecycle with Terraform, including serverless functions, databases, and IAM permissions.
 
-## 🔒 Security Features
+Implementing a secure user authentication system with AWS Cognito.
 
-- AWS Cognito authentication
-- Secure API endpoints
-- Environment variable protection
-- HTTPS enforcement
-- Input validation
+Building a modern, responsive frontend that interacts with a secure cloud API.
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- AWS Amplify for authentication
-- Framer Motion for animations
-- React team for the amazing framework
-- Vite for fast development experience
-
-## 📞 Support
-
-For support and questions, please open an issue in the GitHub repository.
-
----
-
-**Built with ❤️ using React, AWS Amplify, and Framer Motion**
+Applying DevSecOps principles by building a tool focused on automated security scanning.
